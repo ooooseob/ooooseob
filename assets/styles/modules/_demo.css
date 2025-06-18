@@ -1,0 +1,47 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  margin: 0;
+
+  &.is-active {
+    background-color: var(--blue-500);
+  }
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 2.65rem;
+}
+
+#exorcist-characters {
+  list-style: none;
+  padding-inline-start: 0;
+
+  li {
+    padding: 4px;
+
+    &.active {
+      font-weight: 900;
+      color: var(--blue-700);
+    }
+  }
+}
+
+.clickable {
+  user-select: none;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: var(--blue-900);
+  color: var(--blue-100);
+
+  &.is-active {
+    background-color: var(--blue-100);
+    color: var(--blue-800);
+  }
+}

@@ -4,41 +4,137 @@
     <meta charset="UTF-8" />
     <title>JavaScript 펀더멘탈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- MIME 타입 -->
-    <!-- CSS MIME 타입 (기본값: text/css) 생략 가능 -->
-    <link rel="stylesheet" href="./styles/main.css" />
-    <!-- JavaScript MIME 타입 (기본값: text/javascript) 생략 가능 -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="icon" href="./assets/images/ecmascript-logo.png" />
+    <script src="./assets/utils/events.js"></script>
     <script>
-      // console.log(2025)
-      // console.log(6)
-      // console.log(10)
+      // 이벤트 처리기(event handler)
+      function handleToggle() {
+        console.log("toggle triggered");
+      }
     </script>
-    <!-- <script src="./learn/01-hello.js"></script> -->
-    <!-- JavaScript 모듈(Modules)로 호출 : "이 파일은 모듈 파일이다"라고 브라우저에 선언 -->
-    <!-- <script type="module" src="./learn/02-module.js"></script> -->
-    <!-- <script src="./learn/03-primitives.js"></script> -->
-    <!-- <script type="module" src="./learn/02-module.js"></script> -->
-    <!-- <script src="./learn/04-practice.js"></script> -->
-    <!-- <script src="./learn/05-variables.js"></script> -->
-    <!-- <script src="./learn/06-practice.js"></script> -->
-    <!-- <script src="./learn/07-functions.js"></script> -->
-    <!-- <script src="./learn/08-scope-hoist.js"></script> -->
-    <!-- <script src="./learn/09-arrow-function-expression.js"></script> -->
-    <!-- <script src="./learn/10-block-scope.js"></script> -->
-    <!-- <script src="./learn/11-function-scope.js"></script> -->
-    <!-- <script src="./learn/12-object.js"></script> -->
-    <!-- <script src="./learn/13-literal.js"></script> -->
-    <!-- <script src="./learn/14-practice.js"></script> -->
-    <!-- <script src="./learn/15-conditional-statement.js"></script> -->
-    <!-- <script src="./learn/16-practice.js"></script> -->
-    <!-- <script src="./learn/17-compare-objects.js"></script> -->
-    <!-- <script src="./learn/18-typeof-operator.js"></script> -->
-    <!-- <script src="./learn/19-parameter-default-value.js"></script> -->
-    <!-- <script src="./learn/20-toString-parseInt.js"></script> -->
-    <script src="./learn/21-color-format-function.js"></script>
   </head>
 
   <body>
-    <h1>JavaScript 학습</h1>
+    <h1>JavaScript</h1>
+
+    <ul id="exorcist-characters">
+      <li class="character yo-han" data-type="hero">박요한</li>
+      <li class="character master-choi" data-type="master">최강림</li>
+      <li class="character villain-ghost" data-type="villain">악령</li>
+    </ul>
+
+    <div id="demo">
+      <p class="add">단락에 "text-primary" 클래스 이름을 추가해 주세요!</p>
+      <script>
+        const element = document.getElementById("demo").querySelector(".add");
+
+        element.classList.add("text-primary");
+        console.log(element.classList.value);
+        console.log(element.classList.length);
+      </script>
+
+      <p class="remove">단락에서 "remove" 클래스 이름을 제거해 주세요!</p>
+
+      <script>
+        {
+          const demo = document.getElementById("demo");
+          const element = demo.querySelector(".remove");
+          console.log(element.classList.length); // 1
+          element.classList.remove("remove");
+          console.log(element.classList.length); // 0
+        }
+      </script>
+
+      <p class="contains1">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+
+      <script>
+        {
+          const result = document
+            .querySelector("#demo .contains1")
+            .classList.contains("text-primary");
+
+          if (result) {
+            console.log(
+              ".contains1 요소는 text-primary 클래스 이름을 가지고 있습니다."
+            );
+          } else {
+            console.log(
+              ".contains1 요소는 text-primary 클래스 이름을 가지고 있지 않습니다."
+            );
+          }
+        }
+      </script>
+
+      <p class="contains2 text-primary">
+        단락은 "text-primary" 클래스 이름을 가지고 있나요?
+      </p>
+
+      <script>
+        {
+          const element = document.querySelector(".contains2");
+          console.log(element.classList.contains("text-primary"));
+        }
+      </script>
+
+      <p class="toggle">
+        단락은 "text-primary" 이름을 가지고 있나요? 있다면 삭제하고, 없다면
+        추가해 주세요.
+      </p>
+
+      <script>
+        {
+          const toggleElement = document.querySelector("#demo .toggle");
+          console.log(toggleElement.classList.value);
+
+          if (toggleElement.classList.contains("text-primary")) {
+            toggleElement.classList.remove("text-primary");
+          } else {
+            toggleElement.classList.add("text-primary");
+          }
+
+          console.log(toggleElement.classList.value);
+        }
+      </script>
+    </div>
+
+    <button type="button" onclick="handleToggle()">
+      레거시 이벤트 모델 사용하는 요소
+    </button>
+    <hr />
+    <button type="button" class="clickable">클릭 가능한 버튼 요소</button>
+
+    <!-- <script>
+      const button = document.querySelector("button");
+
+      function alertLog(e) {
+        console.log("clicked button");
+        button.classList.toggle("clicked");
+
+        // 명시적 반환
+        // return { name: '나는 반환값이다.' }
+        return () => {
+          console.log("나는 함수가 반환한 함수이다!");
+        };
+
+        // 암묵적으로 반환
+        // return undefined
+      }
+
+      // alertLog
+      const result = alertLog();
+      console.log(result); // undefined
+
+      // 함수 이름만 참조
+      // button.addEventListener('click', alertLog)
+
+      // 함수 이름으로 호출(실행)
+      // 이벤트 연결 (binding events)
+      button.addEventListener("click", alertLog());
+    </script> -->
+
+    <script src="./assets/learn/27-event-listening.js"></script>
   </body>
 </html>
