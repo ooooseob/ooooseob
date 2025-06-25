@@ -2,42 +2,38 @@
 // 📌 forEach() 배열 메서드
 // --------------------------------------------------------------------------
 
-const numbers = [10, 9, 8, 7]
+const numbers = [10, 9, 8, 7];
 
 // for 문 vs. forEach()
 
 // for 문
-;(() => {
+() => {
   // 문(Statement) -> 값이 나오지 않는다.
-  for(let i = 0, l = numbers.length; i<l; ++i) {
-    const number = numbers[i]
-    console.log(i, number)
+  for (let i = 0, l = numbers.length; i < l; ++i) {
+    const number = numbers[i];
+    console.log(i, number);
   }
-})
+};
 
 // .forEach()
-;(() => {
-  // 표현식(Expression) -> 값이 나온다. 
+() => {
+  // 표현식(Expression) -> 값이 나온다.
   // array.forEach((item, index, array) => {})
   numbers.forEach((number, i) => {
-    console.log(i, number)
-  })
-})
-
-;(() => {
-  const fruitBasket = ['체리망고', '토마토', '스트로베리']
+    console.log(i, number);
+  });
+};
+() => {
+  const fruitBasket = ['체리망고', '토마토', '스트로베리'];
   fruitBasket.forEach((fruit, index) => {
-    console.log('과일 바구니 안의 '+ (index + 1) +'번째 과일은 "' + fruit + '"입니다.')
-  })
+    console.log('과일 바구니 안의 ' + (index + 1) + '번째 과일은 "' + fruit + '"입니다.');
+  });
 
   // for (const fruit of fruitBasket) {
   //   console.log('과일 바구니 안의 과일은 "' + fruit + '"이 포함되어 있습니다.')
   // }
-
-
-})
-
-;(() => {
+};
+(() => {
   const players = [
     {
       name: '차범근',
@@ -129,52 +125,51 @@ const numbers = [10, 9, 8, 7]
       strength: '돌파력과 피지컬',
       weakness: '결정력 기복',
     },
-  ]
+  ];
 
-  console.log(players)
+  console.log(players);
 
   // 1. 배열에 포함된 각 선수 이름을 콘솔 패널에 출력
   players.forEach((player) => {
-    console.log(player.name)
-  })
+    console.log(player.name);
+  });
 
   // 2. 배열의 각 항목 중 `name` 값이 `"안정환"`인 정보가 위치하는 인덱스 출력
   {
-    let ahnPlayerIndex
+    let ahnPlayerIndex;
     players.forEach((player, index) => {
-      if(player.name === '안정환') {
-        ahnPlayerIndex = index
+      if (player.name === '안정환') {
+        ahnPlayerIndex = index;
         // break ❌
       }
-    })
-    console.log(ahnPlayerIndex)
+    });
+    console.log(ahnPlayerIndex);
   }
   {
     //    배열 아이템의 인덱스를 찾고 싶다. forEach() 말고 무엇을 사용해서 처리할 수 있을까?
-    const ahnPlayerIndex = players.findIndex((player) => player.name === '안정환')
-    console.log(ahnPlayerIndex)
+    const ahnPlayerIndex = players.findIndex((player) => player.name === '안정환');
+    console.log(ahnPlayerIndex);
   }
 
   // 3. 배열에 포함된 모든 선수의 이름만 포함한 `playerNames` 배열 생성
 
-  const playerNames = []
+  const playerNames = [];
 
   players.forEach((player) => {
-    playerNames.push(player.name)
-  })
+    playerNames.push(player.name);
+  });
 
-  console.log(playerNames)
+  console.log(playerNames);
 
   // 4. 골키퍼 포지션 선수만으로 구성된 `goalkeepers` 배열을 새롭게 생성
 
-  const goalkeepers = []
+  const goalkeepers = [];
 
   players.forEach((player) => {
-    if(player.position === '골키퍼') {
-      goalkeepers.unshift(player)
+    if (player.position === '골키퍼') {
+      goalkeepers.unshift(player);
     }
-  })
+  });
 
-  console.log(goalkeepers)
-  
-})()
+  console.log(goalkeepers);
+})();

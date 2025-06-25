@@ -44,7 +44,7 @@
 
 const draw = () => {
   // count = count + 1
-  console.count("도화지에 그림을 그린 횟수");
+  console.count('도화지에 그림을 그린 횟수');
 };
 
 let wantToDraw = true;
@@ -52,7 +52,7 @@ let wantToDraw = true;
 // 조건문
 // 조건이 참이면 블록 내부의 코드 한 번 수행
 if (wantToDraw) {
-  console.log("if문");
+  console.log('if문');
   draw();
 }
 
@@ -62,17 +62,17 @@ if (wantToDraw) {
 let i = 10;
 
 while (wantToDraw) {
-  console.log("while문");
+  console.log('while문');
   draw();
 
   // 특정 상황이 일치되는 경우
   if (i <= 0) {
     // 조건을 참에서 거짓으로 변경
     wantToDraw = false;
-    console.log("i =", i, "wantToDraw =", wantToDraw);
+    console.log('i =', i, 'wantToDraw =', wantToDraw);
   } else {
     i = i - 1; // 10 - 1 -> 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-    console.log("i =", i);
+    console.log('i =', i);
   }
 }
 
@@ -83,14 +83,7 @@ while (wantToDraw) {
   while (--k >= 0) draw();
 }
 
-const students = [
-  { 이름: "홍민영" },
-  { 이름: "윤정화" },
-  { 이름: "허시온" },
-  { 이름: "조선현" },
-  { 이름: "성정현" },
-  { 이름: "조장원" },
-];
+const students = [{ 이름: '홍민영' }, { 이름: '윤정화' }, { 이름: '허시온' }, { 이름: '조선현' }, { 이름: '성정현' }, { 이름: '조장원' }];
 
 // for 문을 사용해 수강생의 이름을 콘솔 패널에 출력
 for (let i = 0; i < students.length; i++) {
@@ -112,17 +105,17 @@ for (let i = 0; i < students.length - 1; i = i - 1) {
   // 2. while 문을 사용해 숫자 `10`부터 `1`까지 역순으로 출력
 
   // 3. for … of 문을 사용해 다음 배열의 과일 출력
-  const fruits = ["사과", "바나나", "귤", "복숭아"];
+  const fruits = ['사과', '바나나', '귤', '복숭아'];
 
   // 4. do … while 문을 사용해 입력된 비밀번호(`'3001'`) 매칭 검토 후 결과 출력
   let i = 0,
     input;
-  const attempts = ["0124", "8291", "3001", "9073"];
+  const attempts = ['0124', '8291', '3001', '9073'];
 
   // 5. for … in 문을 사용해 객체의 key, value 출력
   const student = {
-    name: "선호",
-    grade: "A",
+    name: '선호',
+    grade: 'A',
     age: 22,
   };
 

@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 // 전역 (Global Scope)
-let scope = '전역'
+let scope = '전역';
 // let scope = 'Scope'
 
 // --------------------------------------------------------------------------
@@ -12,16 +12,16 @@ let scope = '전역'
 
 {
   // 블록 (Block Scope)
-  let scope1 = '지역'
+  let scope1 = '지역';
 
   {
     // 중첩된 블록 (Nested Block Scope)
-    let scope2 = '중첩된 지역'
+    let scope2 = '중첩된 지역';
 
-    console.log(1, scope2) // '중첩된 지역'
+    console.log(1, scope2); // '중첩된 지역'
   }
 
-  console.log(2, scope1) // '지역'
+  console.log(2, scope1); // '지역'
 }
 
-console.log(3, scope) // '전역'
+console.log(3, scope); // '전역'

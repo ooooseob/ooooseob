@@ -19,8 +19,8 @@
 // console.log('처음_가진_사과의_갯수 = ', 처음_가진_사과의_갯수) // 4
 // let initial_apples = 4 // snakeCase
 // console.log('initial_apples =', initial_apples)
-let $initialApples = 4 // camelCase
-console.log('$initialApples =', $initialApples)
+let $initialApples = 4; // camelCase
+console.log('$initialApples =', $initialApples);
 
 // ---------------------------------------------------------------
 
@@ -38,13 +38,13 @@ console.log('$initialApples =', $initialApples)
 // let 추가로_구매한_사과의_갯수 = 27
 
 // 변수 선언 (값 할당 없이)
-let addBuyApples // 기본값 (undefined)
+let addBuyApples; // 기본값 (undefined)
 // let addBuyApples = undefined (암묵적)
-console.log('addBuyApples =', addBuyApples) // undefined
+console.log('addBuyApples =', addBuyApples); // undefined
 
 // 선언된 변수에 값 할당
-addBuyApples = 27
-console.log('addBuyApples =', addBuyApples) // undefined -> 27
+addBuyApples = 27;
+console.log('addBuyApples =', addBuyApples); // undefined -> 27
 
 // console.log('추가로_구매한_사과의_갯수 = ', 추가로_구매한_사과의_갯수) // 27
 
@@ -77,7 +77,6 @@ console.log('addBuyApples =', addBuyApples) // undefined -> 27
 
 // myName2 = 'y9'
 // console.log(3, myName2)
-
 
 // ---------------------------------------------------------------
 // let 변수 vs. const 변수(상수, constant)

@@ -25,7 +25,7 @@
     min-inline-size: 50vmin;
     min-block-size: 50vmin;
   }
-  
+
   .modal-close-button {
     .modal-dialog:hover & {
       opacity: 1;
@@ -41,7 +41,7 @@
     border: 2px solid var(--dialog-close-button-background-color);
     background: var(--dialog-close-button-background-color);
     color: var(--dialog-close-button-color);
-    
+
     &:hover,
     &:active,
     &:focus {
@@ -51,7 +51,3 @@
     }
   }
 }
-
-
-
-

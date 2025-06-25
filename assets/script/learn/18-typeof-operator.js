@@ -10,4 +10,4 @@ const o = {
   empty: null,
   symbol: Symbol('o'),
   int: 100n,
-}
+};

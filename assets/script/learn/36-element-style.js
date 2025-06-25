@@ -16,12 +16,12 @@
 // })();
 
 {
-  const cButton = document.querySelector(".change-style-button");
-  const style = document.querySelector(".box");
+  const cButton = document.querySelector('.change-style-button');
+  const style = document.querySelector('.box');
   console.log(cButton);
   console.log(style);
 
-  cButton.addEventListener("click", () => {
-    style.style.setProperty("padding", "40px");
+  cButton.addEventListener('click', () => {
+    style.style.setProperty('padding', '40px');
   });
 }

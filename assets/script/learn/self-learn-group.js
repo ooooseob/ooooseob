@@ -3,12 +3,12 @@
 // --------------------------------------------------------------------------
 
 const o = {
-  name: "object", //string
+  name: 'object', //string
   serialNumber: 20250613, // number
   isObjectType: () => true, //function -> boolean
   isNotDefined: undefined, //undefined
   empty: null, //null
-  symbol: Symbol("o"), //symbol
+  symbol: Symbol('o'), //symbol
   int: 100n, //bigint
 };
 
@@ -37,13 +37,13 @@ function getMoney(price, unit) {
 
   // 만약 사용자가 전달한 인수에 의해 unit 매개변수 값이  undefined로 설정된다면 '원' 값을 unit 매개변수의 기본값으로 설정한다.
   if (unit === undefined) {
-    unit = "원";
+    unit = '원';
   }
 
   // 사용자가 전달한 인수 값이 '달러' 인 경우, 문자 연결하는 방법을 달리해서 결과값을 반환한다.
-  if (unit === "$") {
+  if (unit === '$') {
     // 반환값 '$' + '80.75'
-    return "$" + price;
+    return '$' + price;
   }
 
   // 개발자가 명시적으로 반환값 설정
@@ -51,7 +51,7 @@ function getMoney(price, unit) {
 }
 
 let moneyKR = getMoney(5000 + 2000 + 1500 + 500); // '10000원'
-let moneyUS = getMoney(10.5 + 90 - 20 + 0.25, "$"); // '$80.75'
+let moneyUS = getMoney(10.5 + 90 - 20 + 0.25, '$'); // '$80.75'
 
 console.log(moneyKR);
 console.log(moneyUS);
@@ -106,7 +106,7 @@ function toHex(number) {
   return hexValue;
 }
 
-console.log(toHex(255) === "ff");
+console.log(toHex(255) === 'ff');
 
 // ---------------------------------------
 // 📌 parseInt(string, radix?), parseFloat(소수점)
@@ -116,37 +116,37 @@ console.log(toHex(255) === "ff");
 // ---------------------------------------
 
 // 단위 제거
-console.log(parseInt("24px"));
-console.log(parseInt("277mm"));
-console.log(parseFloat("1.625rem"));
+console.log(parseInt('24px'));
+console.log(parseInt('277mm'));
+console.log(parseFloat('1.625rem'));
 
 // 단위 제거 함수 작성
 function remove(n) {
   return parseFloat(n);
 }
 
-console.log(remove("320px") === 320);
+console.log(remove('320px') === 320);
 
 // 2진수 문자열 -> 10진수 변경
-console.log(parseInt("10", 2));
-console.log(parseInt("100", 2));
+console.log(parseInt('10', 2));
+console.log(parseInt('100', 2));
 
 // 16진수 문자열 -> 10진수 변경
-console.log(parseInt("00", 16));
-console.log(parseInt("80", 16));
-console.log(parseInt("a0", 16));
-console.log(parseInt("a1", 16));
-console.log(parseInt("ae", 16));
-console.log(parseInt("ff", 16));
+console.log(parseInt('00', 16));
+console.log(parseInt('80', 16));
+console.log(parseInt('a0', 16));
+console.log(parseInt('a1', 16));
+console.log(parseInt('ae', 16));
+console.log(parseInt('ff', 16));
 
 // 16진수 문자열을 10진수로 변경하는 함수 작성
 function fromHex(numb) {
   return parseInt(numb, 16);
 }
 
-console.log(fromHex("00") === 0);
-console.log(fromHex("80") === 128);
-console.log(fromHex("ff") === 255);
+console.log(fromHex('00') === 0);
+console.log(fromHex('80') === 128);
+console.log(fromHex('ff') === 255);
 
 // --------------------------------------------------------------------------
 // ✅ 컬러 포멧 변경 함수 작성 (21번 예제)
@@ -159,5 +159,5 @@ console.log(fromHex("ff") === 255);
 function setHexColor(tenjin) {
   return tenjin.toString(16);
 }
-console.log(setHexColor(255, 255, 255) === "#ffffff");
+console.log(setHexColor(255, 255, 255) === '#ffffff');
 // 예) setRgbColor('ff', 'ff', 'ff') // 결과값: 'rgb(255, 255, 255)'

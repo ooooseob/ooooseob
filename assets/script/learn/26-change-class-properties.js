@@ -1,13 +1,13 @@
-const exorcists = document.getElementById("exorcist-characters");
+const exorcists = document.getElementById('exorcist-characters');
 
-const choi = exorcists.querySelector(".master-choi");
+const choi = exorcists.querySelector('.master-choi');
 // console.dir(choi.classList)
 
 // 오늘날 주로 사용하는 방법(NEW)
 {
-  choi.classList.add("active");
+  choi.classList.add('active');
   // console.dir(choi.classList.value)
-  choi.classList.remove("master-choi");
+  choi.classList.remove('master-choi');
 }
 
 // 이전 시대의 방법 (OLD)

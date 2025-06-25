@@ -31,12 +31,12 @@ const 커피 = {
   용량: '600ml',
   브랜드: '스타벅스',
   이름: '아메리카노',
-}
+};
 
 const 국어사전 = {
   결제: '대금을 주고받아 매매 당사자 사이의 거래 관계를 끝맺는 일',
   결재: '결정할 권한이 있는 상관이 부하가 제출한 안건을 검토하여 허가하거나 승인',
-}
+};
 
 // console.log(국어사전)
 
@@ -46,7 +46,7 @@ const macbookPro = {
   memory: '64GB 2667 DDR4',
   macOS: 'Sequoia 15.4',
   // ...
-}
+};
 
 // console.log(macbookPro)
 
@@ -56,15 +56,15 @@ const macbookPro14 = {
   disk: 'Macintosh HD',
   serialNumber: 'G7T6602PVL',
   os: 'macOS Sequoia 15.5',
-}
+};
 
 // console.log(macbookPro14)
 
-let chip = 'Apple M4 Pro'
-let memory = 24
-let disk = 'Macintosh HD'
-let serialNumber = 'G7T6602PVL'
-let os = 'macOS Sequoia 15.5'
+let chip = 'Apple M4 Pro';
+let memory = 24;
+let disk = 'Macintosh HD';
+let serialNumber = 'G7T6602PVL';
+let os = 'macOS Sequoia 15.5';
 
 // console.log('chip =', chip)
 // console.log('memory =', memory)
@@ -83,38 +83,38 @@ const 객체 = {
   배열: [],
   객체: {},
   함수: () => {},
-}
+};
 
 const h1Camel = {
   fontWeight: 200,
   fontSize: '2.65rem',
-}
+};
 
 // 객체 생성 (리터럴 방법: 쉽다!)
 const h1Kebab = {
   'font-weight': 200,
   'font-size': '2.65rem',
-}
+};
 
 // 객체 속성 읽기(Read)
-console.log(h1Kebab['font-weight']) // 200
+console.log(h1Kebab['font-weight']); // 200
 
 // 객체 속성 쓰기(Write)
-h1Kebab['font-style'] = 'oblique'
+h1Kebab['font-style'] = 'oblique';
 
 // 객체 속성 수정(Update)
-h1Kebab['font-weight'] = 700 // bold
+h1Kebab['font-weight'] = 700; // bold
 
 // 수정된 객체 속성 읽기(Read)
-console.log(h1Kebab['font-weight']) // 700
-console.log(h1Kebab['font-style']) // 'oblique'
+console.log(h1Kebab['font-weight']); // 700
+console.log(h1Kebab['font-style']); // 'oblique'
 
-console.log(h1Kebab)
+console.log(h1Kebab);
 
 // 객체 속성 삭제(Delete)
-delete h1Kebab['font-style']
+delete h1Kebab['font-style'];
 
-console.log(h1Kebab)
+console.log(h1Kebab);
 
 // 객체의 속성(Object's Properties)
 // h1Camel.fontSize
@@ -122,25 +122,25 @@ console.log(h1Kebab)
 
 // 객체의 메서드(Object's Methods : 객체의 속성 중 함수(동사)형태의 것을 특별히 메서드라고 부른다.)
 h1Camel.getFontSize = function () {
-  return h1Camel.fontSize
-}
+  return h1Camel.fontSize;
+};
 
-console.log(h1Camel.getFontSize())
+console.log(h1Camel.getFontSize());
 
 macbookPro.getOS = function () {
-  return macbookPro.macOS
-}
+  return macbookPro.macOS;
+};
 
-console.log(macbookPro.getOS())
-console.log(macbookPro['getOS']())
+console.log(macbookPro.getOS());
+console.log(macbookPro['getOS']());
 
 // 메서드 정의 (매개변수 포함)
 macbookPro.playMusic = function (songTitle) {
-  return '"' + songTitle + '" 재생을 시작합니다. 🎵'
-}
+  return '"' + songTitle + '" 재생을 시작합니다. 🎵';
+};
 
 // 메서드 사용 (함수처럼 호출, 객체를 통해 메서드에 접근)
-console.log(macbookPro.playMusic('첫 눈처럼 너에게 가겠다.'))
+console.log(macbookPro.playMusic('첫 눈처럼 너에게 가겠다.'));
 
 // --------------------------------------------------------------------------
 // 📌 함수의 타입은?
@@ -150,42 +150,42 @@ console.log(macbookPro.playMusic('첫 눈처럼 너에게 가겠다.'))
 // --------------------------------------------------------------------------
 
 function likeLion() {
-  console.log('우리는 멋사 14기!')
+  console.log('우리는 멋사 14기!');
 }
 
-likeLion.order = 14
+likeLion.order = 14;
 
-console.log(likeLion.order)
+console.log(likeLion.order);
 
-delete likeLion.order
+delete likeLion.order;
 
-console.log(likeLion.order)
+console.log(likeLion.order);
 
 // "함수는 값이다."
 // - 함수는 값이므로 함수에 인수로 전달 가능하다. (일급 객체, 일급 함수)
 {
-  greeting(sayHello, '🌈 자바스크립트') // '안녕! 🌈 자바스크립트'
+  greeting(sayHello, '🌈 자바스크립트'); // '안녕! 🌈 자바스크립트'
 
   function sayHello() {
-    return '안녕! '
+    return '안녕! ';
   }
 
   function greeting(helloMessage /* = sayHello */, name) {
     // const helloMessage = sayHello = function () { ... }
 
-    console.log(helloMessage() + name)
+    console.log(helloMessage() + name);
   }
 }
 
 // - 함수는 값이므로 함수가 값으로 반환할 수 있다. (고차 함수)
 {
-  const greeting = sayHello()
-  greeting('🌈 자바스크립트') // '안녕! 🌈 자바스크립트'
+  const greeting = sayHello();
+  greeting('🌈 자바스크립트'); // '안녕! 🌈 자바스크립트'
 
   function sayHello() {
     return (name) => {
-      console.log('안녕! ' + name)
-    }
+      console.log('안녕! ' + name);
+    };
   }
 }
 
@@ -193,15 +193,15 @@ console.log(likeLion.order)
   const galaxyNoteBook = {
     deviceName: '갤럭시 노트북',
     getDeviceName: function () {
-      return galaxyNoteBook.deviceName
+      return galaxyNoteBook.deviceName;
     },
-  }
+  };
 
   // console.log(galaxyNoteBook.getDeviceName) 이렇게 하면 함수가 나오고
   // 함수(컴퓨터 메모리 상에 기억: 주소) 참조
-  console.log(galaxyNoteBook.getDeviceName)
+  console.log(galaxyNoteBook.getDeviceName);
 
   // console.log(galaxyNoteBook.getDeviceName()) 이렇게 했을때 value가 나오는데 왜 그런건가요?
   // 함수(컴퓨터 메모리 상에 기억: 주소) 실행 (소괄호()는 함수이름이 실행 연산자를 만나면 함수가 실행 => 값 반환)
-  console.log(galaxyNoteBook.getDeviceName())
+  console.log(galaxyNoteBook.getDeviceName());
 }

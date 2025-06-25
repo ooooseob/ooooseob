@@ -6,18 +6,18 @@
 // 1. 객체 생성
 // 2. 숫자 생성
 
-let myNum
+let myNum;
 
 // 숫자 리터럴
 // 개발자가 원하는 일
-myNum = 2025
+myNum = 2025;
 
 // 숫자 객체 (생성자는 객체를 생성할 때 사용)
 // 자바스크립트가 하는 일
-myNum = new Number(2025).valueOf()
+myNum = new Number(2025).valueOf();
 
 // 숫가 값 결과
-console.log(myNum)
+console.log(myNum);
 
 // 객체 리터럴을 사용 (쉽게 만들고 싶은데...)
 // const heading1 = {

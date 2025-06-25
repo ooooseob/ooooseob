@@ -65,25 +65,25 @@
 // Boolean
 // ----------------------------------------------
 
-true    // boolean
-'true'  // string
+true; // boolean
+('true'); // string
 
-false   // boolean
-'false' // string
+false; // boolean
+('false'); // string
 
 // ----------------------------------------------
 // Undefined
 // ----------------------------------------------
 
 // 선언된 변수의 기본값으로 사용됨
-undefined
+undefined;
 // console.log(undefined)
 
 // ----------------------------------------------
 // Null
 // ----------------------------------------------
 
-null
+null;
 // console.log(null)
 
 // ----------------------------------------------
@@ -98,5 +98,5 @@ null
 // BigInt
 // ----------------------------------------------
 
-console.log(BigInt(Number.MAX_SAFE_INTEGER + 10))
-console.log(10000n)
+console.log(BigInt(Number.MAX_SAFE_INTEGER + 10));
+console.log(10000n);

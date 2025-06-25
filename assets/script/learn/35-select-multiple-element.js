@@ -1,7 +1,7 @@
 () => {
   // <nav>의 모든 <a> 요소를 찾아보자
   // NodeList 객체는 배열과 유사해보이지만, 배열 객체는 아니다.
-  const paragraphs = Array.from(document.querySelectorAll(".life-tips p"));
+  const paragraphs = Array.from(document.querySelectorAll('.life-tips p'));
   // console.log(paragraphs.length)
   // 맨 마지막 문서의 단락 요소 찾기
   // console.log(paragraphs.item(paragraphs.length - 1))
@@ -41,12 +41,12 @@
 })();
 
 (() => {
-  const lifeTips = document.querySelector(".life-tips");
+  const lifeTips = document.querySelector('.life-tips');
   // console.log(lifeTips)
 
   // Document.querySelectorAll(selectors)
   // Element.querySelectorAll(selectors)
-  const paragraphs = lifeTips.querySelectorAll("p");
+  const paragraphs = lifeTips.querySelectorAll('p');
   // console.log(paragraphs)
 
   // const firstParagraphElement = paragraphs.item(0)
@@ -56,7 +56,7 @@
   // const lastParagraphElement = paragraphs.item(paragraphs.length - 1)
   // console.log(lastParagraphElement)
 
-  const PRIMARY_KEY = "color-primary";
+  const PRIMARY_KEY = 'color-primary';
 
   // Loop (반복, 순환)
   // - while
@@ -96,45 +96,38 @@
 })();
 
 (() => {
-  const paras = document.getElementsByTagName("p");
+  const paras = document.getElementsByTagName('p');
   console.log(paras);
 })();
 
 // HTMLCollection vs. NodeList
 (() => {
-  console.group("DOM 업데이트 전");
+  console.group('DOM 업데이트 전');
   // HTMLCollection (Live)
-  const paras = document.getElementsByTagName("p");
-  console.log("HTMLCollection(라이브 콜렉션: 살아있는 집합) =", paras.length);
+  const paras = document.getElementsByTagName('p');
+  console.log('HTMLCollection(라이브 콜렉션: 살아있는 집합) =', paras.length);
 
-  const paraClasses = document.getElementsByClassName("para");
-  console.log(
-    "HTMLCollection(라이브 콜렉션: 살아있는 집합) =",
-    paraClasses.length
-  );
+  const paraClasses = document.getElementsByClassName('para');
+  console.log('HTMLCollection(라이브 콜렉션: 살아있는 집합) =', paraClasses.length);
 
   // NodeList
-  const paragraphs = document.querySelectorAll("p");
-  console.log("NodeList(스태틱 콜렉션: 고정된 집합)", paragraphs.length);
+  const paragraphs = document.querySelectorAll('p');
+  console.log('NodeList(스태틱 콜렉션: 고정된 집합)', paragraphs.length);
   console.groupEnd();
 
   // Update DOM
-  document.querySelector(".life-tips").innerHTML +=
-    "<p>씻지 않은 채소는 그대로 보관하시는 것이 좋습니다.</p>";
+  document.querySelector('.life-tips').innerHTML += '<p>씻지 않은 채소는 그대로 보관하시는 것이 좋습니다.</p>';
 
-  console.group("DOM 업데이트 후");
-  console.log("HTMLCollection(라이브 콜렉션: 살아있는 집합) =", paras.length);
-  console.log(
-    "HTMLCollection(라이브 콜렉션: 살아있는 집합) =",
-    paraClasses.length
-  );
-  console.log("NodeList(스태틱 콜렉션: 고정된 집합)", paragraphs.length);
+  console.group('DOM 업데이트 후');
+  console.log('HTMLCollection(라이브 콜렉션: 살아있는 집합) =', paras.length);
+  console.log('HTMLCollection(라이브 콜렉션: 살아있는 집합) =', paraClasses.length);
+  console.log('NodeList(스태틱 콜렉션: 고정된 집합)', paragraphs.length);
   console.groupEnd();
 })();
 
 // 실습
 (() => {
-  const starWars = document.querySelector("#star-wars");
+  const starWars = document.querySelector('#star-wars');
   // console.log(starWars)
 
   // 1. 좋은 사람(Good Guy)을 모두 선택하세요.
@@ -143,7 +136,7 @@
 
   // 2. 좋은 사람(Good Guy) 모두에게 `excellent` 클래스 이름을 추가하세요.
   goodGuyList.forEach((guy) => {
-    guy.classList.add("excellent");
+    guy.classList.add('excellent');
   });
 
   // for (const guy of goodGuyList) {
@@ -157,15 +150,15 @@
   // 4. 빌런 모두에게 `naughty` 클래스 이름을 추가하세요.
   for (let i = 0, l = villainList.length; i < l; i += 1) {
     const villain = villainList[i];
-    villain.classList.add("naughty");
+    villain.classList.add('naughty');
   }
 
   // 5. 모든 캐릭터(Character)를 선택하세요.
-  const allCharacters = starWars.querySelectorAll(".character");
+  const allCharacters = starWars.querySelectorAll('.character');
   console.log(allCharacters);
 
   // 6. 모든 캐릭터에 `star-wars` 클래스 이름을 추가하세요.
   allCharacters.forEach((c) => {
-    c.classList.add("star-wars");
+    c.classList.add('star-wars');
   });
 })();

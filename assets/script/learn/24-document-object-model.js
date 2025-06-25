@@ -29,5 +29,5 @@
 // const elementByTagName = document.querySelector("h1");
 // console.log(elementByTagName);
 
-const exorcists = document.querySelector("#exorcist-characters");
+const exorcists = document.querySelector('#exorcist-characters');
 console.log(exorcists);
